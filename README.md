@@ -5,6 +5,26 @@ An AI-assisted demand intake and operations workflow built for **Adapt to China*
 🌐 **Live Demo:**  
 https://adapttochina.pages.dev/tell-me-your-needs.html?ref=github
 
+## 🖥 Product Preview
+
+### Live User Needs Page
+
+Users can describe practical problems in their own words instead of choosing a category first.
+
+![Tell Me Your Needs](assets/01-live-page.png)
+
+### Automation Workflow
+
+Requests are sent through an n8n production webhook, analyzed by Google Gemini, stored as structured data, and followed by an automated confirmation email.
+
+![n8n Workflow](assets/02-n8n-workflow.png)
+
+### AI-Enriched User Data
+
+Free-text requests are converted into structured fields such as primary need, urgency, user stage, suggested route and acquisition source.
+
+![AI-Enriched User Data](assets/03-ai-output.png)
+
 🌏 **Adapt to China:**  
 https://adapttochina.pages.dev/
 
