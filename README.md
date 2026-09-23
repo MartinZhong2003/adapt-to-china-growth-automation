@@ -1,102 +1,101 @@
-# Shanghai Newcomer Meetup — Landing Page
+# Adapt to China — AI Growth Automation
 
-A lightweight event registration landing page built as a learning project for AI-assisted coding, product growth, and operations automation.
+A lightweight AI-native growth operations tool built for an international newcomer event.
 
-## What this project teaches
+The project turns a simple registration landing page into an automated workflow that tracks acquisition sources, classifies user needs with AI, stores structured user data, and sends personalized confirmation emails.
 
-- **Frontend** — the page the user sees and interacts with
-- **HTML** — page structure/content
-- **CSS** — visual design and responsive layout
-- **JavaScript** — interactive behavior
-- **Form** — structured user input
-- **JSON** — common data format between systems
-- **Webhook / API endpoint** — the address the page can send registration data to
-- **LocalStorage** — browser storage used here for demo mode
-- **Git / GitHub** — version control and public project portfolio
-- **Deployment** — putting the page online so other people can use it
+## 🚀 What It Does
 
-## Project structure
+A user arrives from a growth channel such as:
 
-```text
-shanghai-newcomer-meetup-landing/
-├── index.html      # Page structure and content
-├── styles.css      # Visual design
-├── config.js       # Future webhook URL goes here
-├── app.js          # Form logic and submission
-└── README.md       # Project explanation
-```
+`?ref=instagram`
 
-## How the form works
+or
 
-```text
-User fills the form
-        ↓
-JavaScript reads the form data
-        ↓
-Data becomes a JavaScript object / JSON-like structure
-        ↓
-If no webhook URL is configured:
-    Save to browser LocalStorage (demo mode)
-Else:
-    POST the JSON to your webhook/API
-        ↓
-Future workflow can send it to:
-Google Sheets / Airtable / Notion / CRM / email / Slack
-```
+`?ref=wechat`
 
-## Demo mode
+and completes the registration form.
 
-By default, `config.js` contains:
+The system automatically:
 
-```js
-window.REGISTRATION_WEBHOOK_URL = "";
-```
+1. Captures the registration through a production webhook
+2. Tracks the acquisition source
+3. Uses Google Gemini to analyze the user's needs
+4. Generates structured user labels
+5. Stores the enriched data in Google Sheets
+6. Sends a personalized confirmation email
 
-Submissions are stored only in the browser. Inspect them in the browser console with:
+## ⚙️ Workflow
 
-```js
-JSON.parse(localStorage.getItem("adaptToChinaMeetupRegistrations"))
-```
+Landing Page  
+↓  
+Referral Tracking  
+↓  
+n8n Production Webhook  
+↓  
+Google Gemini AI Classification  
+↓  
+Google Sheets  
+↓  
+Personalized Gmail Confirmation
 
-## Later: connect n8n
+## 🤖 AI User Classification
 
-1. Create an n8n **Webhook** node.
-2. Copy the production webhook URL.
-3. Paste it into `config.js`.
-4. Add a **Google Sheets** node after the Webhook.
-5. Map incoming JSON fields to spreadsheet columns.
+The workflow analyzes selected topics and free-text user needs.
 
-Then the flow becomes:
+For example, a user may write:
 
-```text
-Landing Page
-   ↓ POST JSON
-n8n Webhook
-   ↓
-Google Sheets
-   ↓
-Optional: welcome email / Slack alert / AI categorization
-```
+> I arrived in Shanghai yesterday and urgently need an apartment near my university. I also don't have a Chinese bank account yet.
 
-## Product-thinking questions
+The system can automatically generate:
 
-After the page works, do not stop at “the code runs.” Ask:
+- **Primary need:** Renting
+- **Secondary need:** Payments
+- **Urgency:** High
+- **User stage:** New arrival
+- **AI summary:** Newly arrived user seeking urgent housing and payment support.
 
-- What percentage of visitors start the form?
-- What percentage complete it?
-- Which field creates the most friction?
-- Which acquisition channel sends the best registrants?
-- Which topic is selected most often?
-- Can the form automatically segment users?
-- Can we trigger different follow-up messages by user type?
+## 📈 Growth Attribution
 
-That is the difference between a **page** and a **growth/product tool**.
+Different acquisition channels can use different URLs:
 
-## Suggested next iteration
+`?ref=instagram`
 
-- Connect to n8n
-- Write submissions to Google Sheets
-- Auto-tag users by topic
-- Send a confirmation email
-- Add referral parameters such as `?ref=martin`
-- Build a simple registration dashboard
+`?ref=wechat`
+
+`?ref=campus`
+
+`?ref=creator`
+
+The referral source is automatically captured and stored with each registration.
+
+This makes it possible to compare which acquisition channels generate registrations and user demand.
+
+## 🛠 Tech Stack
+
+- HTML
+- CSS
+- JavaScript
+- n8n
+- Google Gemini
+- Google Sheets
+- Gmail
+- Git / GitHub
+- AI-assisted coding
+
+## 💡 Why I Built This
+
+I wanted to explore how an operations or growth idea could be turned into a working tool quickly using AI-assisted coding.
+
+Instead of manually processing registrations, the workflow connects user acquisition, AI analysis, data storage and user communication into one automated system.
+
+The project was built around a simple principle:
+
+**Idea → Build → Automate → Collect Data → Iterate**
+
+## 🌏 Context
+
+This project is connected to **Adapt to China**, an English-first platform I built to help international residents navigate everyday life in China.
+
+Main project:
+https://adapttochina.pages.dev/
