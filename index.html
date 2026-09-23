@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shanghai Newcomer Meetup 2026 — a practical meetup for international newcomers in Shanghai." />
+  <title>Adapt to China Newcomer Night 2026</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav shell">
+      <a class="brand" href="#top">ADAPT·TO·CHINA</a>
+      <a class="nav-link" href="#register">Register</a>
+    </nav>
+    <div class="hero-content shell" id="top">
+      <div class="eyebrow">SHANGHAI · OCTOBER 2026</div>
+      <h1>New to Shanghai?<br />Meet people. Get oriented. Start easier.</h1>
+      <p class="hero-copy">A small, practical meetup for international students and young professionals figuring out housing, payments, healthcare, transport, and everyday life in Shanghai.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#register">Save my spot</a>
+        <a class="button secondary" href="#agenda">See what we’ll cover</a>
+      </div>
+      <div class="hero-meta">
+        <span>📍 Shanghai Jiaotong University xuhui campus, Shanghai</span><span>🕒 2 hours</span><span>🌍 English-first</span><span>👥 Small group</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section shell">
+      <div class="section-heading"><div class="eyebrow dark">WHY JOIN</div><h2>Less searching. More useful answers.</h2></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">🏠</div><h3>Settle in faster</h3><p>Compare practical options for renting, SIM cards, payments, transport and daily essentials.</p></article>
+        <article class="card"><div class="card-icon">🩺</div><h3>Avoid common mistakes</h3><p>Learn what usually surprises newcomers about healthcare, registration, deposits and local apps.</p></article>
+        <article class="card"><div class="card-icon">🤝</div><h3>Meet people in the same stage</h3><p>Connect with other newcomers instead of figuring everything out alone.</p></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="agenda">
+      <div class="shell">
+        <div class="section-heading"><div class="eyebrow dark">AGENDA</div><h2>What happens in 2 hours</h2></div>
+        <div class="timeline">
+          <div class="timeline-item"><div class="time">00:00</div><div><h3>Quick introductions</h3><p>Who you are, when you arrived, and the one thing you still need to figure out.</p></div></div>
+          <div class="timeline-item"><div class="time">00:20</div><div><h3>Shanghai survival stack</h3><p>Payments, maps, transport, healthcare, renting, food and the apps worth knowing first.</p></div></div>
+          <div class="timeline-item"><div class="time">01:00</div><div><h3>Real newcomer cases</h3><p>We work through common problems together instead of giving a generic lecture.</p></div></div>
+          <div class="timeline-item"><div class="time">01:35</div><div><h3>Open Q&A + connections</h3><p>Ask about your own situation and exchange useful contacts with the group.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell register-grid" id="register">
+      <div class="register-copy">
+        <div class="eyebrow dark">REGISTRATION</div><h2>Save your spot</h2>
+        <p>This page is designed as a real lightweight growth tool: the form can run in demo mode now, and later connect to an n8n webhook, Google Sheets workflow, or your own API.</p>
+        <div class="note"><strong>Demo mode:</strong> until you add a webhook URL in <code>config.js</code>, submissions are stored only in your own browser.</div>
+      </div>
+      <form class="form-card" id="registrationForm">
+        <div class="field-grid">
+          <label>Name<input type="text" name="name" placeholder="Martin Zhong" required /></label>
+          <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
+        </div>
+        <div class="field-grid">
+          <label>Current city<input type="text" name="city" placeholder="Shanghai" /></label>
+          <label>School / company<input type="text" name="organization" placeholder="SJTU / Company" /></label>
+        </div>
+        <label>You are mainly...
+          <select name="profile" required>
+            <option value="">Select one</option>
+            <option>International student</option><option>Exchange student</option><option>Young professional</option><option>New resident / partner</option><option>Other</option>
+          </select>
+        </label>
+        <fieldset><legend>What do you most want help with?</legend><div class="check-grid">
+          <label class="check"><input type="checkbox" name="topics" value="Renting" /> Renting</label>
+          <label class="check"><input type="checkbox" name="topics" value="Payments" /> Payments</label>
+          <label class="check"><input type="checkbox" name="topics" value="Healthcare" /> Healthcare</label>
+          <label class="check"><input type="checkbox" name="topics" value="Transport" /> Transport</label>
+          <label class="check"><input type="checkbox" name="topics" value="Food" /> Food</label>
+          <label class="check"><input type="checkbox" name="topics" value="Community" /> Community</label>
+        </div></fieldset>
+        <label>Anything else you want us to know?<textarea name="notes" rows="4" placeholder="I just arrived and I’m looking for..."></textarea></label>
+        <label class="check consent"><input type="checkbox" name="consent" required /> I agree that my registration information can be used for this event.</label>
+        <button class="button primary full" type="submit" id="submitButton">Register</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer><div class="shell footer-inner"><span>Adapt to China</span><a href="https://adapttochina.pages.dev/" target="_blank" rel="noreferrer">Visit the main site ↗</a></div></footer>
+  <script src="config.js"></script><script src="app.js"></script>
+</body>
+</html>
