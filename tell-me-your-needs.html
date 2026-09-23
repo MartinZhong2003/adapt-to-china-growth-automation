@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tell Me What You Need in China | Adapt to China</title>
+<meta content="Describe what you need help with in China. Adapt to China can use your request to identify a relevant guide, recommendation, community resource, or local support option." name="description"/>
+<link href="https://adapttochina.pages.dev/tell-me-your-needs.html" rel="canonical"/>
+<meta content="Adapt to China" property="og:site_name"/>
+<meta content="website" property="og:type"/>
+<meta content="Tell me what you need in China" property="og:title"/>
+<meta content="Describe your situation in your own words. Adapt to China can help route you to a useful next step." property="og:description"/>
+<meta content="https://adapttochina.pages.dev/tell-me-your-needs.html" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body class="needs-page">
+<nav aria-label="Primary">
+<div class="nav-in">
+<a class="logo" href="index.html">ADAPT<span>·TO·</span>CHINA</a>
+<div class="nav-links" id="nav-links"><a href="index.html#explore">Plan Your Move</a><a href="guides.html">Daily Guides</a><a href="index.html#finders">Free Tools</a><a href="about.html">About &amp; Community</a></div>
+<div class="nav-right"><a class="nav-cta" href="answers.html">Get local help →</a>
+<button aria-controls="nav-links" aria-expanded="false" aria-label="Open menu" class="nav-burger" type="button">☰</button>
+</div>
+</div>
+</nav>
+<header class="needs-hero">
+<div class="wrap needs-hero-grid">
+<div class="needs-hero-copy">
+<div class="crumb"><a href="index.html">← Home</a></div>
+<span class="community-kicker">TELL ME YOUR NEEDS</span>
+<h1>Tell me what you are trying to do in China.</h1>
+<p class="lead">You do not need to know the right category. Describe the situation in your own words. I will use it to point you to a useful guide, recommendation, community resource, or local support option.</p>
+</div>
+<aside class="needs-next-card" aria-label="What happens next">
+<span class="needs-card-label">WHAT HAPPENS NEXT</span>
+<ol>
+<li><strong>Your request comes in.</strong><span>You explain the situation once, in plain English.</span></li>
+<li><strong>The request is organized.</strong><span>It can be categorized by need, timing, and urgency so similar requests are easier to review.</span></li>
+<li><strong>You get a clearer next step.</strong><span>The right answer may be a free guide, a recommendation, community help, or local support.</span></li>
+</ol>
+<p>Submitting is free. If paid support may help, I will confirm the scope and price before anything starts.</p>
+</aside>
+</div>
+</header>
+<main>
+<section class="needs-form-section" aria-labelledby="needs-form-title">
+<div class="wrap needs-form-grid">
+<div class="needs-form-intro">
+<span class="community-kicker">YOUR SITUATION</span>
+<h2 id="needs-form-title">What are you stuck on?</h2>
+<p>More detail helps. You can describe a practical task, a decision you are trying to make, or something that is difficult to handle because the information is in Chinese or spread across different platforms.</p>
+<div class="needs-example-list" aria-label="Examples">
+<p><strong>Housing:</strong> “I need a short term room near my university and do not know which platforms to trust.”</p>
+<p><strong>Healthcare:</strong> “I need to see a doctor in Shanghai and want to know which hospital route makes sense.”</p>
+<p><strong>Local task:</strong> “I need someone to call a storage company and confirm the price and pickup rules.”</p>
+</div>
+<div class="needs-safety-note">
+<strong>Please leave out sensitive details.</strong>
+<p>Do not submit passport numbers, passwords, bank details, or full medical records. This form is not monitored continuously and should not be used for emergencies.</p>
+</div>
+</div>
+<form class="needs-form-card" id="needsForm" novalidate>
+<div class="needs-field-grid">
+<label for="needs-name">Name
+<input id="needs-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Alex" required/>
+</label>
+<label for="needs-email">Email
+<input id="needs-email" name="email" type="email" autocomplete="email" maxlength="160" placeholder="alex@example.com" required/>
+</label>
+</div>
+<div class="needs-field-grid">
+<label for="needs-city">Current city or destination
+<input id="needs-city" name="city" type="text" maxlength="80" placeholder="Shanghai" required/>
+</label>
+<label for="needs-timing">When do you need help?
+<select id="needs-timing" name="timing" required>
+<option value="">Choose one</option>
+<option value="Today">Today</option>
+<option value="This week">This week</option>
+<option value="This month">This month</option>
+<option value="Later">Later</option>
+<option value="Not sure">Not sure</option>
+</select>
+</label>
+</div>
+<label for="needs-support">What kind of help would be useful?
+<select id="needs-support" name="support_preference" required>
+<option value="">Choose one</option>
+<option value="Information or explanation">Information or explanation</option>
+<option value="Recommendations or options">Recommendations or options</option>
+<option value="Help contacting or coordinating locally">Help contacting or coordinating locally</option>
+<option value="Not sure">I am not sure</option>
+</select>
+</label>
+<label for="needs-details">What do you need help with?
+<textarea id="needs-details" name="details" rows="8" minlength="20" maxlength="1800" placeholder="Tell me what you are trying to do, what has already happened, and what is making it difficult." required></textarea>
+<span class="needs-field-hint">Write it in your own words. You do not need to choose a category first.</span>
+</label>
+<label class="needs-consent" for="needs-consent">
+<input id="needs-consent" name="consent" type="checkbox" required/>
+<span>I agree that the information I submit can be used to understand and respond to this request. I understand that requests may be automatically categorized to help organize them.</span>
+</label>
+<label class="needs-honeypot" aria-hidden="true" for="needs-company">Company website
+<input id="needs-company" name="company_website" type="text" tabindex="-1" autocomplete="off"/>
+</label>
+<button class="btn teal needs-submit" id="needsSubmit" type="submit">Send my request →</button>
+<p class="needs-form-status" id="needsStatus" role="status" aria-live="polite"></p>
+</form>
+</div>
+</section>
+<section class="needs-routing-section" aria-labelledby="needs-routing-title">
+<div class="wrap">
+<div class="needs-routing-head">
+<span class="community-kicker">ONE REQUEST, DIFFERENT NEXT STEPS</span>
+<h2 id="needs-routing-title">Not every request needs the same kind of help.</h2>
+<p>The goal is to make the next step clearer without forcing you to understand the whole site first.</p>
+</div>
+<div class="needs-routing-grid">
+<article><span>01</span><h3>Free guide</h3><p>If the answer already exists on Adapt to China, I can point you to the most relevant page.</p></article>
+<article><span>02</span><h3>Recommendation</h3><p>If you need options rather than a general explanation, your request can be reviewed with that in mind.</p></article>
+<article><span>03</span><h3>Community</h3><p>Some questions are better answered through shared experience from other newcomers.</p></article>
+<article><span>04</span><h3>Local support</h3><p>If the task needs research, Chinese communication, or coordination, I can confirm whether personal support is a fit.</p></article>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap foot-grid">
+<div>© 2026 · Adapt to China · Built in Shanghai by Martin<br/>General orientation, not medical advice.</div>
+<div class="foot-links">
+<a href="guides.html">Daily life guides</a>
+<a href="rent.html">Renting</a>
+<a href="healthcare.html">Hospital Finder</a>
+<a href="special-food.html">Food Finders</a>
+<a href="tell-me-your-needs.html?ref=needs-page-footer">Tell me your needs</a>
+<a href="answers.html">Personal support</a>
+<a href="about.html">Community &amp; About</a>
+<a href="guides.html#heads-up-board">Learn from others</a>
+<span class="foot-120">EMERGENCY → 120</span>
+</div>
+</div>
+</footer>
+<script src="needs-config.js"></script>
+<script src="needs.js"></script>
+<!-- Cloudflare Web Analytics --><script data-cf-beacon='{"token":"9a216b8bfa1d40169670f0f754b2b6bf"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
